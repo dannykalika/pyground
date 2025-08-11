@@ -17,6 +17,6 @@ def test_class(page: Page):
     elements = commons.Elements(page)
     page.goto(commons.url + '/clientdelay')
     expect(elements.primary_button).to_be_visible()
-    expect(elements.success_button).not_to_be_attached()
+    expect(elements.success).not_to_be_attached()
     elements.primary_button.click()
-    expect(elements.success_button).to_be_visible(timeout=17000)
+    expect(elements.success).to_be_visible(timeout=17000)

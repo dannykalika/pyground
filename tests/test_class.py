@@ -14,8 +14,9 @@ def test_class(page: Page):
     Expected Result:
     The button should be found
     """
+    elements = commons.Elements(page)
     page.goto(commons.url + '/classattr')
-    btn = page.locator('.btn-primary')
+    btn = elements.primary_button
     expect(btn).to_be_visible()
     expect(btn).to_be_enabled()
     expect(btn).to_contain_text('Button')
