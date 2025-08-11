@@ -1,0 +1,16 @@
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+exclude = [
+    ".venv",
+    "docs",
+    "build",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "B"]
+
+ignore = ["E501"]
+
+[tool.ruff.format]
+quote-style = "single"
